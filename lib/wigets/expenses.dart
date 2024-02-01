@@ -1,4 +1,5 @@
 import 'package:expensetracker/models/expense.dart';
+import 'package:expensetracker/wigets/chart/chart.dart';
 import 'package:expensetracker/wigets/new_expense.dart';
 import 'package:flutter/material.dart';
 import 'package:expensetracker/wigets/expenses_list/expenses_list.dart';
@@ -30,7 +31,7 @@ class _Expenses extends State<Expenses> {
         category: Category.food),
     Expense(
         title: "travelling",
-        amount: 19.99,
+        amount: 10.99,
         dateTime: DateTime.now(),
         category: Category.work)
   ];
@@ -82,7 +83,10 @@ class _Expenses extends State<Expenses> {
         ],
       ),
       body: Column(
-        children: [const Text('data'), Expanded(child: mainContent)],
+        children: [
+          Chart(expenses: _registeredExpenses),
+          Expanded(child: mainContent),
+        ],
       ),
     );
   }

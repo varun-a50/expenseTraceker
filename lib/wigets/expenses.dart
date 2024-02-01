@@ -27,12 +27,12 @@ class _Expenses extends State<Expenses> {
 
   final List<Expense> _registeredExpenses = [
     Expense(
-        title: "travelling",
+        title: "Pizza",
         amount: 19.99,
         dateTime: DateTime.now(),
         category: Category.food),
     Expense(
-        title: "travelling",
+        title: "Pen",
         amount: 10.99,
         dateTime: DateTime.now(),
         category: Category.work)
